@@ -1,5 +1,11 @@
 import java.util.*
 
+val decorations = listOf ("rock", "pagoda", "plastic plant", "alligator", "flowerpot")
+
+fun main() {
+    println( decorations.filter {it[0] == 'p'})
+}
+
 fun fishFood (day : String) : String {
     return when (day) {
         "Monday" -> "flakes"
@@ -19,9 +25,6 @@ fun feedTheFish() {
 }
 
 
-fun main(args: Array<String>) {
-    feedTheFish()
-}
 fun randomDay() : String {
     val week = arrayOf ("Monday", "Tuesday", "Wednesday", "Thursday",
         "Friday", "Saturday", "Sunday")
