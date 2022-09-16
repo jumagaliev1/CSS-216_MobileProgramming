@@ -17,4 +17,9 @@ class Aquarium(length: Int = 100, width: Int = 20, height: Int = 40) {
                 "Length: $length cm " +
                 "Height: $height cm")
     }
+    constructor(numberOfFish: Int) : this() {
+        val tank = numberOfFish * 2000 * 1.1
+        height = (tank / (length * width)).toInt()
+
+    }
 }
