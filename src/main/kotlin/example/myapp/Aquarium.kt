@@ -18,6 +18,9 @@ class Aquarium(length: Int = 100, width: Int = 20, height: Int = 40) {
         val tank = numberOfFish * 2000 * 1.1
         height = (tank / (length * width)).toInt()
     }
-    val volume: Int
+    var volume: Int
         get() = width * height * length / 1000
+        set(value) {
+            height = (value * 1000) / (width * length)
+        }
 }
