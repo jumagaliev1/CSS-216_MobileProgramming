@@ -1,22 +1,24 @@
 package example.myapp
 
-abstract class AquariumFish {
-    abstract val color: String
+interface FishAction  {
+    fun eat()
 }
-class Shark: AquariumFish(), FishAction {
+
+interface FishColor {
+    val color: String
+}
+class Shark: FishAction, FishColor {
     override val color = "grey"
     override fun eat() {
         println("hunt and eat fish")
     }
 }
 
-class Plecostomus: AquariumFish(), FishAction {
+class Plecostomus: FishAction, FishColor {
     override val color = "gold"
     override fun eat() {
         println("eat algae")
     }
 }
 
-    interface FishAction  {
-    fun eat()
-}
+
