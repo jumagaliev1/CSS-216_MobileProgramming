@@ -1,13 +1,13 @@
 package example.myapp
 
-class Aquarium {
+class Aquarium(length: Int = 100, width: Int = 20, height: Int = 40) {
     var width: Int = 20
-    var heigh: Int = 40
+    var height: Int = 40
     var length: Int = 100
 
     fun printSize() {
         println("Width: $width cm " +
                 "Length: $length cm " +
-                "Height: $heigh cm")
+                "Height: $height cm")
     }
 }
