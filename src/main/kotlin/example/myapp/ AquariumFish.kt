@@ -14,7 +14,7 @@ class Shark: FishAction, FishColor {
     }
 }
 
-class Plecostomus: FishAction, FishColor {
+class Plecostomus(fishColor: FishColor = GoldColor): FishAction, FishColor by GoldColor {
     override val color = "gold"
     override fun eat() {
         println("eat algae")
