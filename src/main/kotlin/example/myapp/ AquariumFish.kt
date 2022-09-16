@@ -21,4 +21,8 @@ class Plecostomus: FishAction, FishColor {
     }
 }
 
+object GoldColor : FishColor {
+    override val color = "gold"
+}
+
 
